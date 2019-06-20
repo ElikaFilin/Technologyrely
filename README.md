@@ -1,2 +1,0 @@
-# Technologyrely
-Homework
