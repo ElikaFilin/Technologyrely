@@ -1,4 +1,11 @@
 function some(array, callbackFn) {
+ let flag =false;
+  for (let i = 1; i < array.length; i++) {
+    if (callbackFn(array[i])){
+      return flag = true;
+    }
+  }
+  return flag;
 
 }
 

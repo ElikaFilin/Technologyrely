@@ -1,4 +1,11 @@
 function every(array, callbackFn) {
+  let flag = true;
+  for (let i = 1; i < array.length; i++) {
+    if (!callbackFn(array[i])){
+      return flag = false;
+    }
+  }
+  return flag;
 
 }
 
