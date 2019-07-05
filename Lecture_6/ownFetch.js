@@ -1,4 +1,4 @@
-const ownFetch = () => {
+ const ownFetch = () => {
   // implementation
 };
 

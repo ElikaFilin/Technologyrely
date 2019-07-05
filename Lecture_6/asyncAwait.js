@@ -1,4 +1,4 @@
-const random = (max, min) => Math.floor(Math.random() * (max - min)) + min;
+ const random = (max, min) => Math.floor(Math.random() * (max - min)) + min;
 
 function test() {
   fetch('https://jsonplaceholder.typicode.com/users')
