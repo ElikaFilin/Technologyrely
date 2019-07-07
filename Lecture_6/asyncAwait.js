@@ -26,7 +26,22 @@ function test() {
 }
 
 function asyncTest() {
-  // implementation;
+
+		console.log('I have to appear in a console first');
+		const fet = await fetch('https://jsonplaceholder.typicode.com/users');
+		const json = await fet.json();
+		const user = json[random(10, 0)];
+		console.log('My user is', user);
+		const posts = await fetch('https://jsonplaceholder.typicode.com/posts');
+		const postsjson = await posts.json();
+		const post = postsjson[random(100, 0)];
+		console.log('My post is', post);
+		const finalRes = {
+			user,
+			post
+		};
+		console.log('Finally', finalRes);
+
 }
 
 test();
