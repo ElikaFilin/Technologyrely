@@ -4,12 +4,12 @@
  */
 function throttle(callback, time) {
 	return function (args) {
-		let previousCall = this.lastCall;
+		let previousCall = this.lastCall===undefined?0:this.lastCall;
 		this.lastCall = Date.now();
-		if (previousCall === undefined
-		(this.lastCall - previousCall) > time) {
+		if ((this.lastCall - previousCall) > time) {
 			callback(args);
 		}
+	}
 	}
 }
 let logger = (args) => console.log(`My args are ${args}`);
