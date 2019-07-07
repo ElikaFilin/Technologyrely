@@ -25,7 +25,7 @@ function test() {
   console.log('I have to appear in a console first');
 }
 
-function asyncTest() {
+async function asyncTest() {
 
 		console.log('I have to appear in a console first');
 		const fet = await fetch('https://jsonplaceholder.typicode.com/users');
