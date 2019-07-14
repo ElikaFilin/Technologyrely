@@ -3,7 +3,6 @@
 //   text
 //   <div>Bam</div>
 // </body>
-<<<<<<< HEAD
 function prettify(document) {
 	var body = document.getElementsByTagName("body")[0];
 	run_prettify(body);
@@ -33,10 +32,6 @@ function run_prettify(el) {
 
 const elements = prettify(document);
 //console.log(document.body.innerHTML);
-=======
-const elements = prettify(document);
-console.log(document.body.innerHTML);
->>>>>>> 57e2c98fa175dc3beb740699b5abff14fa7a024f
 // <body>
 //   <p>Boom</p>
 //   text

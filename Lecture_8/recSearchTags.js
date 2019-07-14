@@ -3,7 +3,6 @@
 //   text
 //   <div><p>2</p></div>
 // </body>
-<<<<<<< HEAD
 
 function recSearchTags(document, tagName){
 		let tagList = [];
@@ -26,8 +25,3 @@ recSearchTags(document, "p");
 //const elements = recSearchTags(document, 'p');
 // ['<p>1</p>' '<p>2</p>'] где каждый элемент это объект соответствующего типа
 //console.log(elements.length); // 2
-=======
-const elements = recSearchTags(document, 'p');
-// ['<p>1</p>' '<p>2</p>'] где каждый элемент это объект соответствующего типа
-console.log(elements.length); // 2
->>>>>>> 57e2c98fa175dc3beb740699b5abff14fa7a024f
