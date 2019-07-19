@@ -1,27 +1,19 @@
 import React, {Component, Fragment} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import createReactClass from 'create-react-class';
 
-class List extends Component {
-	constructor(props) {
-		super(props);
 
-	}
-
-	render() {
-		const list = this.props.name.map((e) => {
+function List(props)  {
+		const list = props.list_of_todos.map((e) => {
 			return (<li key={e.id}> {e.title}</li>)
 		});
 		return (
-			<div><h1>{this.props.children}</h1>
+			<div><h1>{props.children}</h1>
 				<ul>
 					{list}
 				</ul>
 			</div>
 		);
-	}
-
 }
 
 class App extends Component {
@@ -50,7 +42,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<React.Fragment><List name={this.state.listDone}>List of Done</List><List name={this.state.listUnDone}> List
+			<React.Fragment><List list_of_todos={this.state.listDone}>List of Done</List><List list_of_todos={this.state.listUnDone}> List
 				of Undone</List></React.Fragment>)
 	}
 };
