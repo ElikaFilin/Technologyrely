@@ -1,0 +1,11 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <h1>{{title}}</h1>
+  <p>Welcome to  {{ title }}</p>
+  <ul>
+    {% for menulist in props %}
+      <li> <a href="{{ '/'~menulist.link }}">{{  menulist.title}}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <h1>{{title}}</h1>
+  <p>Welcome to  {{ title }}</p>
+  <table>
+      <tr>{% for uses in data[0]|keys %}
+          <th>{{ uses }}</th>
+      {% endfor %}</tr>
+    {% for user in data %}
+     <tr>
+         <td> <a href="{{ '/users/'~user.id }}">{{ user.id}}</a></td>
+         <td>{{ user.name}} </td>
+         <td>{{ user.username}} </td>
+         <td>{{ user.email}} </td>
+         <td>
+             {% for a,b in user.address %}
+                 {% if b is iterable %}
+                         {% for a1,b1 in b %}
+                         {{ a1~' : '~b1 }},
+                         {% endfor %}
+                     {% else %}
+                         {{ a~' : '~b }},
+                 {% endif %}
+
+             {% endfor %}
+         </td>
+         <td>{{ user.phone}} </td>
+         <td>{{ user.website}} </td>
+         <td>
+             {% for a,b in user.company %}
+                 {{ a~' : '~b }},
+             {% endfor %}
+         </td>
+     </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
